@@ -43,12 +43,14 @@ matrix:
   fast_finish: 1
   include:
     - env: COVERAGE=1
-      perl: '5.30'
+      perl: "5.30"
+    - env: AUTHOR_TESTING=1 RELEASE_TESTING=1
+      perl: "5.30"
 env:
   global:
-    - AUTHOR_TESTING=1
+    - AUTHOR_TESTING=0
     - AUTOMATED_TESTING=1
-    - RELEASE_TESTING=1
+    - RELEASE_TESTING=0
     - PERL_CPANM_OPT=--with-suggests
     - SENDMAIL=/usr/sbin/sendmail  # fake, but needed for LWP::Protocol::mailto
 before_install:
