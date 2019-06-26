@@ -9,6 +9,8 @@ perl:
   - dev
   - "blead"
   - "blead-thr"
+  - "5.30"
+  - "5.30-thr"
   - "5.28"
   - "5.28-thr"
   - "5.26"
@@ -41,7 +43,7 @@ matrix:
   fast_finish: 1
   include:
     - env: COVERAGE=1
-      perl: '5.28'
+      perl: '5.30'
 env:
   global:
     - AUTHOR_TESTING=1
